@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#10151e" />
+    <meta
+      name="description"
+      content="Crea y gobierna Aethoria, un mundo de fantasía pixel art con siete continentes, 63 reinos y una historia que nunca deja de crecer."
+    />
+    <script>
+      if (!new URLSearchParams(location.search).has("mundo")) {
+        const cover = document.createElement("link");
+        cover.rel = "preload";
+        cover.as = "image";
+        cover.href = "/art/menu-valdoria.webp";
+        cover.fetchPriority = "high";
+        document.head.append(cover);
+      }
+    </script>
+    <link
+      rel="preload"
+      href="/fonts/cinzel.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      href="/fonts/pixelify.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/dm-sans.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <title>Aethoria · World Sandbox</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/boot.js"></script>
+  </body>
+</html>
